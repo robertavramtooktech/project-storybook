@@ -537,7 +537,7 @@
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
-            "templateData": "<div class=\"list-item {{ task?.state }}\">\n    <label\n      [attr.aria-label]=\"'archiveTask-' + task.id\"\n      for=\"checked-{{ task?.id }}\"\n      class=\"checkbox\"\n    >\n      <input\n        type=\"checkbox\"\n        disabled=\"true\"\n        [defaultChecked]=\"task?.state === 'TASK_ARCHIVED'\"\n        name=\"checked-{{ task?.id }}\"\n        id=\"checked-{{ task?.id }}\"\n      />\n      <span class=\"checkbox-custom\" (click)=\"onArchive(task.id)\"></span>\n    </label>\n    <label\n      [attr.aria-label]=\"task.title + ''\"\n      for=\"title-{{ task?.id }}\"\n      class=\"title\"\n    >\n      <input\n        type=\"text\"\n        [value]=\"task.title\"\n        readonly=\"true\"\n        id=\"title-{{ task?.id }}\"\n        name=\"title-{{ task?.id }}\"\n        placeholder=\"Input title\"\n      />\n    </label>\n    <button\n      *ngIf=\"task?.state !== 'TASK_ARCHIVED'\"\n      class=\"pin-button\"\n      [attr.aria-label]=\"'pinTask-' + task.id\"\n      (click)=\"onPin(task.id)\"\n    >\n      <span class=\"icon-star\"></span>\n    </button>\n  </div>"
+            "templateData": "<div class=\"list-item {{ task?.state }}\">\n    <label\n      [attr.aria-label]=\"'archiveTask-' + task.id\"\n      for=\"checked-{{ task?.id }}\"\n      class=\"checkbox\"\n    >\n      <input\n        type=\"checkbox\"\n        disabled=\"true\"\n        [defaultChecked]=\"task?.state === 'TASK_ARCHIVED'\"\n        name=\"checked-{{ task?.id }}\"\n        id=\"checked-{{ task?.id }}\"\n      />\n      <span class=\"checkbox-custom\" (click)=\"onArchive(task.id)\"></span>\n    </label>\n    <label\n      [attr.aria-label]=\"task.title + ''\"\n      for=\"title-{{ task?.id }}\"\n      class=\"title\"\n    >\n      <input\n        type=\"text\"\n        [value]=\"task.title\"\n        readonly=\"true\"\n        id=\"title-{{ task?.id }}\"\n        name=\"title-{{ task?.id }}\"\n        placeholder=\"Input title\"\n        style=\"background: red;\"\n      />\n    </label>\n    <button\n      *ngIf=\"task?.state !== 'TASK_ARCHIVED'\"\n      class=\"pin-button\"\n      [attr.aria-label]=\"'pinTask-' + task.id\"\n      (click)=\"onPin(task.id)\"\n    >\n      <span class=\"icon-star\"></span>\n    </button>\n  </div>"
         },
         {
             "name": "TaskListComponent",
@@ -718,7 +718,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/task/task.stories.ts",
+                "file": "src/app/components/task-list/task-list.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -728,7 +728,7 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/task-list/task-list.stories.ts",
+                "file": "src/app/components/task/task.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -898,21 +898,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/task/task.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "args => ({\n  props: {\n    ...args,\n    onPinTask: actionsData.onPinTask,\n    onArchiveTask: actionsData.onArchiveTask,\n  },\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/app/components/task-list/task-list.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "args => ({\n  props: {\n    ...args,\n    onPinTask: TaskStories.actionsData.onPinTask,\n    onArchiveTask: TaskStories.actionsData.onArchiveTask,\n  },\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/task/task.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "args => ({\n  props: {\n    ...args,\n    onPinTask: actionsData.onPinTask,\n    onArchiveTask: actionsData.onArchiveTask,\n  },\n})"
             },
             {
                 "name": "WithPinnedTasks",
