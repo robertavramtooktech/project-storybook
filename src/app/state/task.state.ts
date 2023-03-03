@@ -8,8 +8,7 @@ import { Task } from '../models/task.model';
 export const actions = {
   ARCHIVE_TASK: 'ARCHIVE_TASK',
   PIN_TASK: 'PIN_TASK',
-  ERROR: 'APP_ERROR',
-  LOAD_TASKS: 'LOAD_TASKS',
+  ERROR: 'APP_ERROR'
 };
 
 export class ArchiveTask {

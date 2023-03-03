@@ -16,13 +16,12 @@ import { Observable } from 'rxjs';
 })
 export class TaskListWrapperComponent {
   tasks$?: Observable<any>;
-  loading$?: Observable<any>;
 
   constructor(private store: Store) {
     this.tasks$ = store.select((state) => state.taskbox.tasks);
     // setTimeout(() => {
     //   this.tasks$ = store.select((state) => state.taskbox.tasks);
-    // }, 5000);
+    // }, 3000);
   }
 
   /**
