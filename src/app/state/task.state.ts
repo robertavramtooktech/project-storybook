@@ -8,7 +8,8 @@ import { Task } from '../models/task.model';
 export const actions = {
   ARCHIVE_TASK: 'ARCHIVE_TASK',
   PIN_TASK: 'PIN_TASK',
- ERROR: 'APP_ERROR',
+  ERROR: 'APP_ERROR',
+  LOAD_TASKS: 'LOAD_TASKS',
 };
 
 export class ArchiveTask {
@@ -22,9 +23,11 @@ export class PinTask {
 
   constructor(public payload: string) {}
 }
+
  // The class definition for our error field
  export class AppError {
    static readonly type = actions.ERROR;
+
    constructor(public payload: boolean) {}
  }
 
@@ -60,6 +63,11 @@ export class TasksState {
   @Selector()
   static getError(state: TaskStateModel): boolean {
     return state.error;
+  }
+
+  @Selector()
+  static getStatus(state: TaskStateModel): string {
+    return state.status;
   }
 
   @Selector()

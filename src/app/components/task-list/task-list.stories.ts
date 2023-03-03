@@ -3,17 +3,17 @@ import { componentWrapperDecorator, moduleMetadata, Meta, Story } from '@storybo
 
 import { CommonModule } from '@angular/common';
 
-import { PureTaskListComponent } from './pure-task-list.component';
+import { TaskListComponent } from './task-list.component';
 import { TaskComponent } from '../task/task.component';
 
 import * as TaskStories from '../task/task.stories';
 
 export default {
-  component: PureTaskListComponent,
+  component: TaskListComponent,
   decorators: [
     moduleMetadata({
       //👇 Imports both components to allow component composition with storybook
-      declarations: [PureTaskListComponent, TaskComponent],
+      declarations: [TaskListComponent, TaskComponent],
       imports: [CommonModule],
     }),
     //👇 Wraps our stories with a decorator

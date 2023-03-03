@@ -4,14 +4,14 @@ import { fireEvent, within } from '@storybook/testing-library';
 
 import { CommonModule } from '@angular/common';
 
-import { PureInboxScreenComponent } from './pure-inbox-screen.component';
+import { InboxScreenComponent } from './inbox-screen.component';
 import { TaskModule } from '../task.module';
 
 import { Store, NgxsModule } from '@ngxs/store';
 import { TasksState } from '../../state/task.state';
 
 export default {
-  component:PureInboxScreenComponent,
+  component: InboxScreenComponent,
   decorators: [
     moduleMetadata({
       imports: [CommonModule,TaskModule,NgxsModule.forRoot([TasksState])],

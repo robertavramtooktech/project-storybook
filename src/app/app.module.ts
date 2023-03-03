@@ -9,11 +9,11 @@ import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 
+ import { InboxScreenWrapperComponent } from './components/inbox-screen-wrapper/inbox-screen-wrapper.component';
  import { InboxScreenComponent } from './components/inbox-screen/inbox-screen.component';
- import { PureInboxScreenComponent } from './components/pure-inbox-screen/pure-inbox-screen.component';
 
 @NgModule({
- declarations: [AppComponent, InboxScreenComponent, PureInboxScreenComponent],
+ declarations: [AppComponent, InboxScreenComponent, InboxScreenWrapperComponent],
   imports: [
     BrowserModule,
     TaskModule,
